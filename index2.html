@@ -1,0 +1,90 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Online Course Registration System</title>
+    <link rel="shortcut icon" href="1.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.1/dat.gui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script src="https://codepen.io/Godje/pen/aBbjza.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style=" color:whitesmoke">School of Information Technology and Engineering</h1>
+                <!--<label>Total Seats Available</label>
+                <p id="totalSeats">120</p>
+                
+                <button type="button" class="btn" id="apply" onclick="applySeat()">Apply</button> 
+                -->
+
+                
+                <div class="wrapper">
+                    <div class="counter col_half">
+                        <i class="fas fa-code-branch fa-3x"></i>
+                        <h3>B.Tech Information Technology</h3>
+                        <p id="totalSeats">120</p>
+                        <button type="button" class="btn" id="apply" onclick="applySeat()" name="myButton">Apply</button>
+                        <h2 class="timer count-title count-number" data-to="300" data-speed="1500"></h2>
+                        
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                        <div class="counter col_half">
+                            <i class="fas fa-terminal fa-3x"></i>
+                            <h3>Bachelor of Computer Applications</h3>
+                            <p id="totalSeats2">120</p>
+                            <button type="button" class="btn" id="apply2" onclick="applySeat2()" name="myButton2">Apply</button>
+                            <h2 class="timer count-title count-number" data-to="300" data-speed="1500"></h2>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-12">
+                <br>
+                <button type="submit" class="btn submitbtn" onclick="submit()" style="background-color:white;">Submit</button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+    var x = document.getElementsByName("myButton")[0];
+    var y = document.getElementsByName("myButton2")[0];
+    function applySeat(){
+        document.getElementById('totalSeats').innerHTML -= 1;
+        document.getElementsByName("myButton")[0].disabled = true;
+        document.getElementsByName("myButton2")[0].disabled = true;
+    }
+    function applySeat2(){
+        document.getElementById('totalSeats2').innerHTML -= 1 ;
+        document.getElementsByName("myButton")[0].disabled = true;
+        document.getElementsByName("myButton2")[0].disabled = true;   
+    }
+    function submit(){
+        if (x.disabled == true && y.disabled == true){
+            window.alert("Congratulations you have successfully registered!");
+        }
+        else{
+            window.alert("Please select a course before submitting.");
+        }
+        
+
+    }
+</script>
+<script src="animation2.js"></script>
+</body>
+</html>
